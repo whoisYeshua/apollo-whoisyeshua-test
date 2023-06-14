@@ -3,6 +3,7 @@ type Query {
   continent(code: String): Continent
   countries(pagination: Pagination): [Country!]
   country(code: String): Country
+  test: String
 }
 
 input Pagination {

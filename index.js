@@ -9,7 +9,9 @@ const typeDefsPath = resolve('./schema.gql')
 const typeDefs = readFileSync(typeDefsPath).toString('utf-8')
 
 const resolvers = {
-  Query: {},
+  Query: {
+    test: () => 'test',
+  },
 }
 
 const mocks = {
