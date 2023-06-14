@@ -1,0 +1,32 @@
+type Query {
+  continents(pagination: Pagination): [Continent!]
+  continent(code: String): Continent
+  countries(pagination: Pagination): [Country!]
+  country(code: String): Country
+}
+
+input Pagination {
+  offset: Int
+  limit: Int
+}
+
+type Continent {
+  code: String!
+  name: String
+  countries(pagination: Pagination): [Country]
+}
+
+type Country {
+  code: String!
+  name: String
+  native: String
+  phone: String
+  continent: Continent
+  states(pagination: Pagination): [State!]
+}
+
+type State {
+  code: String!
+  name: String
+  country: Country
+}
