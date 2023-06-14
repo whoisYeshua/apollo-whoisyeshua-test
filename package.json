@@ -2,6 +2,7 @@
   "name": "apollo-test",
   "type": "module",
   "scripts": {
+    "build": "echo \"No build step currently\"",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
