@@ -25,6 +25,7 @@ const server = new ApolloServer({
     schema: makeExecutableSchema({ typeDefs, resolvers }),
     mocks,
   }),
+  introspection: true,
 })
 
 const { url } = await startStandaloneServer(server, { listen: { port: 4000 } })
