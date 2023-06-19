@@ -7,9 +7,10 @@ type Query {
   countries(pagination: Pagination): [Country!]
   "Получение страны по коду"
   country(code: String): Country
-  test: String
+  test: String # test query
 }
 
+"Пагинация по списку"
 input Pagination {
   "Смещение"
   offset: Int
@@ -17,6 +18,7 @@ input Pagination {
   limit: Int
 }
 
+"Континент"
 type Continent {
   "Код континента"
   code: String!
@@ -26,6 +28,7 @@ type Continent {
   countries(pagination: Pagination): [Country]
 }
 
+"Страна"
 type Country {
   "Код страны"
   code: String!
@@ -41,6 +44,7 @@ type Country {
   states(pagination: Pagination): [State!]
 }
 
+"Штат"
 type State {
   "Код штата/области"
   code: String!
