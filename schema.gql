@@ -1,3 +1,6 @@
+scalar Date
+scalar Bigint
+
 type Query {
   "Получение списка континентов"
   continents(pagination: Pagination): [Continent!]
@@ -8,6 +11,8 @@ type Query {
   "Получение страны по коду"
   country(code: String): Country
   test: String # test query
+  age: Bigint!
+  date: Date
 }
 
 "Пагинация по списку"

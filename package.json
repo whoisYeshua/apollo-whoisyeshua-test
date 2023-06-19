@@ -4,11 +4,13 @@
   "scripts": {
     "build": "echo \"No build step currently\"",
     "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@apollo/server": "^4.7.3",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "nodemon": "^2.0.22"
   },
   "devDependencies": {
     "@graphql-tools/mock": "^9.0.0",

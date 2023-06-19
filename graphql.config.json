@@ -1,0 +1,4 @@
+{
+  "schema": "https://apollo-whoisyeshua-test.onrender.com",
+  "documents": "**/*.{graphql,gql}"
+}
