@@ -1,33 +1,51 @@
 type Query {
+  "Получение списка континентов"
   continents(pagination: Pagination): [Continent!]
+  "Получение континента по коду"
   continent(code: String): Continent
+  "Получение списка стран"
   countries(pagination: Pagination): [Country!]
+  "Получение страны по коду"
   country(code: String): Country
   test: String
 }
 
 input Pagination {
+  "Смещение"
   offset: Int
+  "Лимит"
   limit: Int
 }
 
 type Continent {
+  "Код континента"
   code: String!
+  "Название континента"
   name: String
+  "Страны континента"
   countries(pagination: Pagination): [Country]
 }
 
 type Country {
+  "Код страны"
   code: String!
+  "Название страны"
   name: String
+  "Название страны на родном языке"
   native: String
+  "Телефонный код страны"
   phone: String
+  "Континент, к которому принадлежит страна"
   continent: Continent
+  "Штаты/области страны"
   states(pagination: Pagination): [State!]
 }
 
 type State {
+  "Код штата/области"
   code: String!
+  "Название штата/области"
   name: String
+  "Страна, к которой принадлежит штат/область"
   country: Country
 }
